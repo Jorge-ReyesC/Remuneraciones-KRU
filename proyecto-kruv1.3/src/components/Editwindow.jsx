@@ -1,17 +1,22 @@
 import React from 'react';
-import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import Form from 'react-bootstrap/Form';
 
-
-const Ingresoempleados= () => {
-    return (
-    <div>
-        <div className='box-text'>
-            <h1>Ingreso de empleados.</h1>
-            <h2 className='parrafo'>Aqui puedes ingresar la información personal de tus empleados</h2>
-        </div>
-        <div className='container'>
-            <Form>
+function Editwindow (propsedit) {
+  return (
+    <Modal
+      {...propsedit}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+      <Form>
                 <div className='row'>
                     <div className='col'> 
                     <Form.Group className="mb-3" controlId="nombre">
@@ -101,14 +106,15 @@ const Ingresoempleados= () => {
                     </Form.Group>
                     </div>
                 </div>
-                <Button className='Buttonsumit' variant="primary" type="submit">
-                Agregar
+                <>
+                <Button onClick={propsedit.onHide}>Actualizar
                 </Button>
+                </>
             </Form>
-        </div>
-    </div>
+      </Modal.Body>
+    </Modal>
+    
+  );
+}
 
-    );
-};
-
-export default Ingresoempleados;
+export default Editwindow;

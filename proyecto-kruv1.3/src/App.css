@@ -9,17 +9,11 @@
     .box{
         display:flex;
     }
-
     .image-icon{
-
     width: 120%;
     border-radius: 5px;
-    
-
-    }
-    
-    .box-text{
-    
+    }  
+    .box-text{  
     background-color:dimgray;
     margin-bottom: 5%;
     padding-left: 3%;
@@ -28,9 +22,6 @@
     width: 98%;
     border-radius: 2px;
     }
-    
-    
-    
     main{
         width: 100%;
         padding: 20px;
@@ -88,8 +79,4 @@
     
     align-content: center;
     }
-
-
-
-
 }

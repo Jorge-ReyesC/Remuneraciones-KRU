@@ -1,12 +1,22 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Ventanaeditar from '../components/Editwindow';
+import {
+    BiEdit
+}from "react-icons/bi";
 
 
 
 
 const Perfiles = () => {
+    const [modalShow, setModalShow] = React.useState(false);
+    const handleClose = () => {  
+        setModalShow(false);
+        
+    };
+    const handleShow = () => setModalShow(true);
+
     return (
         <div>
             <div className='box-text'>
@@ -26,42 +36,22 @@ const Perfiles = () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <td >Larry </td>
+                            <td >17283834-8 </td>
+                            <td>978675643</td>
                             <td>
-                            <ButtonGroup aria-label="Basic example">
-                                <Button variant="secondary">Editar</Button>
-                                <Button variant="secondary">Eliminar</Button>
-                            </ButtonGroup>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>
-                            <ButtonGroup aria-label="Basic example">
-                                <Button variant="secondary">Editar</Button>
-                                <Button variant="secondary">Eliminar</Button>
-                            </ButtonGroup>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colSpan={2}>Larry the Bird</td>
-                            <td>@twitter</td>
-                            <td>
-                            <ButtonGroup aria-label="Basic example">
-                                <Button variant="secondary">Editar</Button>
-                                <Button variant="secondary">Eliminar</Button>
-                            </ButtonGroup>
+                                <Button variant="primary" onClick={handleShow}>
+                                <BiEdit ></BiEdit>
+                                </Button>
+                                <Ventanaeditar
+                                show={modalShow}
+                                onHide={handleClose}
+                                />   
                             </td>
                         </tr>
                     </tbody>
                 </Table>
             </div>
-                
-
         </div>
     );
 };

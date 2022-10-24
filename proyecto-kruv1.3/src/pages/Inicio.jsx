@@ -12,7 +12,7 @@ const Inicio= () => {
             <div className='container'>
                 <div className='row'>
                     <div className='col-md-4'>
-                    <Card style={{ width: '18rem' }}>
+                    <Card style={{ width: '18rem'}}>
                         <Card.Img variant="top" src="https://es.justexw.com/wp-content/uploads/sites/2/importar-datos-web-en-excel.jpg" />
                             <Card.Body>
                                 <Card.Title>Agrega tus empleados!</Card.Title>

@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Sidebar from './components/Sidebar';
 import Inicio from './pages/Inicio.jsx';
 import Perfiles from './pages/Perfiles.jsx';
@@ -19,6 +21,7 @@ const App = () => {
           <Route path="/Ingresoempleados" element={<Ingresoempleados />} />
         </Routes>
       </Sidebar>
+      <ToastContainer />
     </BrowserRouter>
   );
 };
